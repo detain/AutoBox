@@ -42,3 +42,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.iso
+
+
+# =========================
+# Random Files
+# =========================
+test.ps1
+NotNeeded

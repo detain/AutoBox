@@ -1,0 +1,1 @@
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy Unrestricted -Scope LocalMachine -Confirm:$false -Force"
