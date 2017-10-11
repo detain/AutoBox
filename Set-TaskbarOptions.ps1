@@ -31,6 +31,7 @@ Set-TaskbarOptions -Size Small
 
 http://boxstarter.org
 #>
+
   [CmdletBinding(DefaultParameterSetName = 'unlock')]
   param(
     [Parameter(ParameterSetName = 'lock')]

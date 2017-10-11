@@ -19,16 +19,16 @@ None
 https://github.com/JourneyOver/
 #>
 
-#Make sure PowerShell help is useful
+# Make sure PowerShell help is useful
 Update-Help -Confirm:$false;
 
-#Set Power Profile to High Performance
+# Set Power Profile to High Performance
 .\Set-PowerProfile.ps1
 
-#Delete some default apps (collecting data so this won't be fully ready for some time)
+# Delete some default apps (collecting data so this won't be fully ready for some time)
 .\Remove-Default-Apps.ps1
 
-#Setup local user profile and add features
+# Setup local user profile and add features
 . .\NeverNotify-UAC.ps1
 Set-UACLevel 0
 . .\Restart-Explorer.ps1
@@ -40,13 +40,17 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileEx
 . .\Set-TaskbarOptions.ps1
 Set-TaskbarOptions -Size Small -Lock -Combine Always
 
-#Install chocolatey and packages
+# Pin github and testing folder to Quick Access
+.\Set-QuickAccess.ps1 -Action Pin -Path "$env:USERNAME\Desktop\Github"
+.\Set-QuickAccess.ps1 -Action Pin -Path "$env:USERNAME\Desktop\TESTING"
+
+# Install chocolatey and packages
 .\choco\Install-Chocolatey.ps1
 
-#Install/Update packages from PatchMyPC
+# Install/Update packages from PatchMyPC
 .\PatchMyPC\PatchMyPC.ps1
 
-#Add Devcon to run at startup
+# Add Devcon to run at startup
 .\Devcon\StartDevcon.ps1
 
 ### WIP ###

@@ -46,7 +46,7 @@ function Download-File {
     [switch]$IgnoreSSLCertErrors
   )
 
-  #Validate the URL, if it's not a proper URL, throw an Error
+  # Validate the URL, if it's not a proper URL, throw an Error
   if (-not (Valid-UrlFormat($url))) {
     Write-Error "$url is not a valid URL.";
     return;
@@ -55,7 +55,7 @@ function Download-File {
   $numSegments = ([System.Uri]$url).Segments.Length;
   $filename = ([System.Uri]$url).Segments[$numSegments - 1];
 
-  #Validate the path, if it doesn't exist, create it.
+  # Validate the path, if it doesn't exist, create it.
   if (Test-Path $path) {
     if (-not ($path.EndsWith('\'))) {
       $path = $path + '\' + $filename;
@@ -75,7 +75,7 @@ function Download-File {
     }
   }
 
-  #Try to download the data at the given URL
+  # Try to download the data at the given URL
   $client = new-object System.Net.WebClient;
   if ($url.Scheme -eq 'https') {
     if ($IgnoreSSLCertErrors) {

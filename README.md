@@ -9,9 +9,7 @@ Execution policy is set to Restricted by default. You need to fix that by runnin
 
 Set-ExecutionPolicy Unrestricted -Confirm:$false
 
-This will change the execution policy on the machine to allow running of scripts. This is a requirement
-to make these scripts work.
+This will change the execution policy on the machine to allow running of scripts. This is a requirement to make these scripts work.
 
 Notes:
-Windows 10 generally will download the newest driver for your hardware, but if you run into trouble, you'll
-have to turn off that feature.
+Windows 10 generally will download the newest driver for your hardware, but if you run into trouble, you'll have to turn off that feature.

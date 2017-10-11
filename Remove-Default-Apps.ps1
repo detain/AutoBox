@@ -1,6 +1,5 @@
 #   Description:
-# This script removes unwanted Apps that come with Windows. If you  do not want
-# to remove certain Apps comment out the corresponding lines below.
+# This script removes unwanted Apps that come with Windows.
 
 Import-Module -DisableNameChecking $PSScriptRoot\lib\take-own.psm1
 Import-Module -DisableNameChecking $PSScriptRoot\lib\force-mkdir.psm1
@@ -10,6 +9,7 @@ do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 
 Write-Output "Uninstalling default apps"
 $apps = @(
+  "Microsoft.MicrosoftSolitaireCollection"
   "king.com.CandyCrushSaga"
   "king.com.CandyCrushSodaSaga"
   "king.com.*"
@@ -33,3 +33,5 @@ foreach ($app in $apps) {
 # Prevents "Suggested Applications" returning
 force-mkdir "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent"
 Set-ItemProperty "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent" "DisableWindowsConsumerFeatures" 1
+
+Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" "SilentInstalledAppsEnabled" 0

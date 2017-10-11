@@ -1,7 +1,7 @@
-#Download and install it
+# Download and install it
 iex (new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1")
 
-#Add it to the current user's PowerShell profile
+# Add it to the current user's PowerShell profile
 $add = "Import-Module PSReadLine;
 Set-PSReadlineKeyHandler -Key Alt+C -Function CaptureScreen;"
 $powershell_profile = $env:userprofile + "\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1";

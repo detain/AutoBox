@@ -5,8 +5,8 @@
 *  2017-10-02                   *
 *                               *
 *********************************
-Settings: 
-Note: Givin USB DeviceID is only for reference. 
+Settings:
+Note: Givin USB DeviceID is only for reference.
 
 DeviceID=USB\VID_1B1C&PID_1B33&REV_0205<-- Use Device ID with &REV_XXXX
          USB\VID_1B1C&PID_1B33         <-- Not Instance ID

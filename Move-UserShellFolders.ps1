@@ -33,7 +33,7 @@ Get-LibraryNames
     [string]$newPath,
     [switch]$DoNotMoveOldContent
   )
-  #why name the key downloads when you can name it {374DE290-123F-4565-9164-39C4925E467B}? duh.
+  # Why name the key downloads when you can name it {374DE290-123F-4565-9164-39C4925E467B}? duh.
   if ($libraryName.ToLower() -eq "downloads") {
     $libraryName = "{374DE290-123F-4565-9164-39C4925E467B}";
   }
