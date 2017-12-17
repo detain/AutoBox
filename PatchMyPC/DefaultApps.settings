@@ -1,7 +1,7 @@
 # This setting file can be used to automatically check applications when Patch My PC Updater is started. Just ensure this DefaultApps.Settings is in the same folder as PatchMyPC.exe.
 # Currently all the apps are commented out using the # before the application name to enable the auto check remove the # before the application name
 
-#µTorrent
+#ÂµTorrent
 #360 Total Security
 7-Zip
 #8GadgetPack
@@ -129,7 +129,7 @@ qBittorrent
 #SFXMaker
 #Silverlight
 #Simple System Tweaker
-Skype
+#Skype
 #Soft Organizer
 #SMPlayer
 #SonyPC

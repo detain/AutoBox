@@ -22,35 +22,55 @@ https://github.com/JourneyOver/
 # Make sure PowerShell help is useful
 Update-Help -Confirm:$false;
 
+# Turn UAC to never notify
+Write-Host "Trying to turn UAC to: Never Notify"
+. .\NeverNotify-UAC.ps1
+Set-UACLevel 0
+
 # Set Power Profile to High Performance
+Write-Host "Trying to set Power Profile to: High Perfomance"
 .\Set-PowerProfile.ps1
 
-# Delete some default apps (collecting data so this won't be fully ready for some time)
+# Delete some default apps
+Write-Host "Trying to remove: Default Installed Apps"
 .\Remove-Default-Apps.ps1
 
 # Setup local user profile and add features
-. .\NeverNotify-UAC.ps1
-Set-UACLevel 0
 . .\Restart-Explorer.ps1
 . .\Move-UserShellFolders.ps1
-Move-LibraryDirectory 'My Video' 'D:\Videos'
-.\Install-GodMode.ps1
+Write-Host "Moving My Video to D:\Media"
+Move-LibraryDirectory 'My Video' 'D:\Media'
+Write-Host "Trying to install: NetFx3"
+.\Install-WindowsFeature.ps1 NetFx3
 . .\Set-WindowsExplorerOptions.ps1
+Write-Host "Trying to set: Windows Explorer Options"
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar -DisableOpenFileExplorerToQuickAccess -DisableShowRecentFilesInQuickAccess -DisableShowFrequentFoldersInQuickAccess
 . .\Set-TaskbarOptions.ps1
+Write-Host "Trying to set: Taskbar Options"
 Set-TaskbarOptions -Size Small -Lock -Combine Always
 
-# Pin github and testing folder to Quick Access
-.\Set-QuickAccess.ps1 -Action Pin -Path "$env:USERNAME\Desktop\Github"
-.\Set-QuickAccess.ps1 -Action Pin -Path "$env:USERNAME\Desktop\TESTING"
+# Pin folders to Quick Access
+Write-Host "Pinning folders to Quick Access"
+.\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\Desktop\Github"
+.\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\Desktop\TESTING"
+.\Set-QuickAccess.ps1 -Action Pin -Path "F:\3DS Tools"
 
 # Install chocolatey and packages
+Write-Host "Trying to install: Chocolatey and Packages"
 .\choco\Install-Chocolatey.ps1
 
 # Install/Update packages from PatchMyPC
+Write-Host "Trying to install: tools from PatchMyPC"
 .\PatchMyPC\PatchMyPC.ps1
 
-# Add Devcon to run at startup
-.\Devcon\StartDevcon.ps1
+# Add Devcon to run at startup (disabled for now)
+#Write-Host "Adding Devcon to run at startup"
+#.\Devcon\StartDevcon.ps1
 
-### WIP ###
+# Copy formatting tools to user profile
+Write-Host "Trying to copy: Formatting tools to User Profile"
+.\Copy-FormattingTools.ps1
+
+# Installs flexget and copies config files to userprofile
+Write-Host "Trying to install: Flexget"
+.\Flexget_Installer.ps1

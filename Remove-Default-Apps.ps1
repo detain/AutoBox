@@ -9,15 +9,28 @@ do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 
 Write-Output "Uninstalling default apps"
 $apps = @(
+  # default Windows 10 apps
+  "Microsoft.SkypeApp"
+  "Microsoft.MicrosoftOfficeHub"
   "Microsoft.MicrosoftSolitaireCollection"
+
+  # Threshold 2 apps
+
+  # Redstone apps
+
+  # non-Microsoft
+  "king.com.BubbleWitch3Saga"
   "king.com.CandyCrushSaga"
   "king.com.CandyCrushSodaSaga"
   "king.com.*"
-  "D52A8D61.FarmVille2CountryEscape"
-  "GAMELOFTSA.Asphalt8Airborne"
-  "flaregamesGmbH.RoyalRevolt2"
-  "Playtika.CaesarsSlotsFreeCasino"
-  "A278AB0D.MarchofEmpires"
+  "*.DisneyMagicKingdoms*"
+  "*.MarchOfEmpires*"
+  "*.HiddenCity*"
+  "*.FarmVille2CountryEscape*"
+  "*.Asphalt8Airborne*"
+  "*.RoyalRevolt2*"
+  "*.CaesarsSlotsFreeCasino*"
+  "*.WinZipUniversal*"
 )
 
 foreach ($app in $apps) {

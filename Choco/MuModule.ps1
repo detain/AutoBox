@@ -18,7 +18,6 @@ choco install cheatengine
 choco install streamlink
 choco install twitch
 choco install discord.install
-#choco install skype
 
 # Not needed at this time
 #choco install googlechrome
