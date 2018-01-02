@@ -72,5 +72,5 @@ Write-Host "Trying to copy: Formatting tools to User Profile"
 .\Copy-FormattingTools.ps1
 
 # Installs flexget and copies config files to userprofile
-Write-Host "Trying to install: Flexget"
-.\Flexget_Installer.ps1
+Write-Host "Trying to install: PIP Packages"
+.\Pip_Packages.ps1

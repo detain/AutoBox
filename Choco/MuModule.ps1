@@ -9,7 +9,7 @@ choco install steam
 # Media
 choco install plexmediaserver
 choco install vlc
-choco install sonarr --ignore-checksums
+choco install sonarr
 #choco install radarr
 choco install jackett
 
