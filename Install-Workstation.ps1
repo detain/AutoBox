@@ -52,12 +52,12 @@ Set-TaskbarOptions -Size Small -Lock -Combine Always
 # Pin folders to Quick Access
 Write-Host "Pinning folders to Quick Access"
 .\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\Desktop\Github"
-.\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\Desktop\TESTING"
+.\Set-QuickAccess.ps1 -Action Pin -Path "I:\Emulation"
 .\Set-QuickAccess.ps1 -Action Pin -Path "F:\3DS Tools"
 
 # Install chocolatey and packages
 Write-Host "Trying to install: Chocolatey and Packages"
-.\choco\Install-Chocolatey.ps1
+.\Install-Chocolatey.ps1
 
 # Install/Update packages from PatchMyPC
 Write-Host "Trying to install: tools from PatchMyPC"
@@ -71,6 +71,13 @@ Write-Host "Trying to install: tools from PatchMyPC"
 Write-Host "Trying to copy: Formatting tools to User Profile"
 .\Copy-FormattingTools.ps1
 
-# Installs flexget and copies config files to userprofile
+# Installs PIP packages
 Write-Host "Trying to install: PIP Packages"
-.\Pip_Packages.ps1
+pip install python-language-server
+pip install --upgrade autopep8
+
+# Installs NPM packages
+Write-Host "Trying to install: NPM Packages"
+npm -g install ytdl # https://github.com/fent/node-ytdl
+npm -g install speed-test # https://github.com/sindresorhus/speed-test
+npm -g install fkill-cli # https://github.com/sindresorhus/fkill-cli
