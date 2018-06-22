@@ -29,6 +29,7 @@ choco install centbrowser
 choco install cheatengine
 choco install cue
 choco install dropbox --pre
+choco install ffmpeg
 choco install geforce-experience
 choco install git.install --params="'/GitAndUnixToolsOnPath'"
 choco install gitkraken
@@ -41,7 +42,7 @@ choco install memreduct
 choco install mremoteng
 choco install msiafterburner
 choco install nodejs.install
-choco install plexmediaserver
+#choco install plexmediaserver
 choco install python3 --params '"/InstallDir:C:\Tools\python3"'
 choco install qbittorrent --x86
 choco install sonarr
@@ -55,6 +56,7 @@ choco install vlc
 choco install vnc-viewer
 choco install windirstat
 choco install winrar
+choco install wget
 
 # Install cint-gh packages
 [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor
@@ -62,4 +64,5 @@ choco install winrar
   [System.Net.SecurityProtocolType]::Tls -bor
   [System.Net.SecurityProtocolType]::Ssl3
 
-iwr https://goo.gl/aFBC52 | iex; cinst-gh leonflix --force
+iwr https://goo.gl/aFBC52 -UseBasicParsing | iex; cinst-gh leonflix --force
+#iwr https://goo.gl/aFBC52 -UseBasicParsing | iex; cinst-gh swig --force

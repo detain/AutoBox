@@ -28,7 +28,7 @@ Write-Host "Trying to turn UAC to: Never Notify"
 Set-UACLevel 0
 
 # Set Power Profile to High Performance
-Write-Host "Trying to set Power Profile to: High Perfomance"
+Write-Host "Trying to set Power Profile to: High Performance"
 .\Set-PowerProfile.ps1
 
 # Delete some default apps
@@ -52,7 +52,9 @@ Set-TaskbarOptions -Size Small -Lock -Combine Always
 # Pin folders to Quick Access
 Write-Host "Pinning folders to Quick Access"
 .\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\Desktop\Github"
-.\Set-QuickAccess.ps1 -Action Pin -Path "I:\Emulation"
+.\Set-QuickAccess.ps1 -Action Pin -Path "C:\Tools\nginx"
+#.\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\.config\bw_plex"
+.\Set-QuickAccess.ps1 -Action Pin -Path "F:\Emulation"
 .\Set-QuickAccess.ps1 -Action Pin -Path "F:\3DS Tools"
 
 # Install chocolatey and packages
@@ -73,8 +75,10 @@ Write-Host "Trying to copy: Formatting tools to User Profile"
 
 # Installs PIP packages
 Write-Host "Trying to install: PIP Packages"
+python -m pip install -U pip setuptools
 pip install python-language-server
 pip install --upgrade autopep8
+#pip install bw_plex[all]
 
 # Installs NPM packages
 Write-Host "Trying to install: NPM Packages"
