@@ -3,7 +3,7 @@
 Re-image Post-Install Script
 
 .DESCRIPTION
-After re-installing Windows,  this will Set up various settings, install chocolatey, install packages, and install custom packages that Chocolatey cannot/does not support yet.
+After re-installing Windows, this will Set up various settings, install chocolatey, install packages, and install custom packages that Chocolatey cannot/does not support yet.
 
 .EXAMPLE
 .\Install-Workstation.ps1

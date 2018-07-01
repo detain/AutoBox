@@ -21,42 +21,50 @@ choco feature enable -n=useRememberedArgumentsForUpgrades
 choco install chocolateygui --source https://www.myget.org/F/chocolateygui/ --pre
 
 # Install all other apps
-choco install 7zip.install
+choco install 7zip
 choco install atom --pre
-choco install autohotkey.install
-choco install bulkrenameutility.install
+choco install autohotkey
+choco install bulkrenameutility
 choco install centbrowser
 choco install cheatengine
-choco install cue
+#choco install cue
 choco install dropbox --pre
+choco install etcher
 choco install ffmpeg
+choco install flashplayerplugin
 choco install geforce-experience
-choco install git.install --params="'/GitAndUnixToolsOnPath'"
+choco install geforce-game-ready-driver
+choco install git --params="'/GitAndUnixToolsOnPath'"
 choco install gitkraken
 choco install goggalaxy
+#choco install heroku-cli
 choco install itch
 choco install jackett
 choco install jbs
 choco install lockhunter
-choco install memreduct
+#choco install memreduct
 choco install mremoteng
 choco install msiafterburner
-choco install nodejs.install
+choco install nodejs
+choco install origin
 #choco install plexmediaserver
 choco install python3 --params '"/InstallDir:C:\Tools\python3"'
 choco install qbittorrent --x86
 choco install sonarr
+choco install ssip.portable
 choco install steam
 choco install streamlink
 choco install teamviewer
 choco install twitch
 choco install unchecky
+choco install uplay
 choco install ussf
 choco install vlc
 choco install vnc-viewer
+choco install wget
 choco install windirstat
 choco install winrar
-choco install wget
+choco install winscp
 
 # Install cint-gh packages
 [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor
