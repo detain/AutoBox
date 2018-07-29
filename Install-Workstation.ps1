@@ -40,8 +40,12 @@ Write-Host "Trying to remove: Default Installed Apps"
 . .\Move-UserShellFolders.ps1
 Write-Host "Moving My Video to D:\Media"
 Move-LibraryDirectory 'My Video' 'D:\Media'
-Write-Host "Trying to install: NetFx3"
+Write-Host "Trying to install: Windows Features"
 .\Install-WindowsFeature.ps1 NetFx3
+.\Install-WindowsFeature.ps1 SmbDirect
+.\Install-WindowsFeature.ps1 SMB1Protocol
+.\Install-WindowsFeature.ps1 SMB1Protocol-Client
+.\Install-WindowsFeature.ps1 SMB1Protocol-Server
 . .\Set-WindowsExplorerOptions.ps1
 Write-Host "Trying to set: Windows Explorer Options"
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar -DisableOpenFileExplorerToQuickAccess -DisableShowRecentFilesInQuickAccess -DisableShowFrequentFoldersInQuickAccess
