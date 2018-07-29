@@ -42,7 +42,7 @@ choco install itch
 choco install jackett
 choco install jbs
 choco install lockhunter
-#choco install memreduct
+choco install memreduct
 choco install mremoteng
 choco install msiafterburner
 choco install nodejs
@@ -62,9 +62,9 @@ choco install ussf
 choco install vlc
 choco install vnc-viewer
 choco install wget
-choco install windirstat
 choco install winrar
 choco install winscp
+choco install wiztree
 
 # Install cint-gh packages
 [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor
