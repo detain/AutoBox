@@ -48,7 +48,7 @@ choco install msiafterburner
 choco install nodejs
 choco install origin
 #choco install plexmediaserver
-choco install python3 --params '"/InstallDir:C:\Tools\python3"'
+choco install python3 --version 3.6.7 --params '"/InstallDir:C:\Tools\python3"'
 choco install qbittorrent --x86
 choco install sonarr
 choco install ssip.portable
