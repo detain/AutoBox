@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
 Installs the given Windows feature.
 
@@ -25,7 +25,7 @@ https://github.com/JourneyOver/
 param (
   [string]$FeatureName
 )
-$exist = .\Get-WindowsFeatures.ps1 | ? {$_.Name -eq $FeatureName};
+$exist = .\Get-WindowsFeatures.ps1 | Where-Object {$_.Name -eq $FeatureName};
 if ($exist) {
   dism /online /Enable-Feature /FeatureName:$FeatureName | Out-Null;
 }

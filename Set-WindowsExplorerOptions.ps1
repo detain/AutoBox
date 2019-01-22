@@ -1,4 +1,4 @@
-function Set-WindowsExplorerOptions {
+﻿function Set-WindowsExplorerOptions {
   <#
 .SYNOPSIS
 Sets options on the Windows Explorer shell
@@ -84,7 +84,7 @@ http://boxstarter.org
     [switch]$DisableShowRibbon
   )
 
-  $PSBoundParameters.Keys | % {
+  $PSBoundParameters.Keys | ForEach-Object {
     if ($_ -like "En*") { $other = "Dis" + $_.Substring(2)}
     if ($_ -like "Dis*") { $other = "En" + $_.Substring(3)}
     if ($PSBoundParameters[$_] -and $PSBoundParameters[$other]) {

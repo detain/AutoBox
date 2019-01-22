@@ -49,7 +49,7 @@ If ((Test-Path -Path $Path -PathType Container) -ne $true) {
 
 # Pin or Unpin
 $QuickAccess = New-Object -ComObject shell.application
-$TargetObject = $QuickAccess.Namespace("shell:::{679f85cb-0220-4080-b29b-5540cc05aab6}").Items() | where {$_.Path -eq "$Path"}
+$TargetObject = $QuickAccess.Namespace("shell:::{679f85cb-0220-4080-b29b-5540cc05aab6}").Items() | Where-Object {$_.Path -eq "$Path"}
 If ($Action -eq "Pin") {
   If ($TargetObject -ne $null) {
     Write-Warning "Path is already pinned to Quick Access."

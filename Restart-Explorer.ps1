@@ -1,4 +1,4 @@
-function Restart-Explorer {
+﻿function Restart-Explorer {
   <#
 .SYNOPSIS
 Restarts the Explorer.exe process in Windows.
@@ -27,7 +27,7 @@ https://github.com/mwrock
     catch {$global:error.RemoveAt(0)}
 
     if ($explorer -ne $null) {
-      $explorer | ? { $_.UserName -eq "$($user.Domain)\$($user.Name)"} | Stop-Process -Force -ErrorAction Stop | Out-Null
+      $explorer | Where-Object { $_.UserName -eq "$($user.Domain)\$($user.Name)"} | Stop-Process -Force -ErrorAction Stop | Out-Null
     }
 
     Start-Sleep 1

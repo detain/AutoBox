@@ -1,4 +1,4 @@
-$OS = (Get-WmiObject -class Win32_OperatingSystem).Caption
+﻿$OS = (Get-WmiObject -class Win32_OperatingSystem).Caption
 
 If ($OS -match "Microsoft Windows 10") {
   # Install chocolatey
@@ -9,7 +9,7 @@ If ($OS -match "Microsoft Windows 10") {
 }
 
 # Refresh the PSEnviroment
-refreshenv
+Update-SessionEnvironment
 
 # Stop getting prompted
 choco feature enable -n=allowGlobalConfirmation
@@ -72,5 +72,5 @@ choco install wiztree
   [System.Net.SecurityProtocolType]::Tls -bor
   [System.Net.SecurityProtocolType]::Ssl3
 
-iwr https://goo.gl/aFBC52 -UseBasicParsing | iex; cinst-gh leonflix --force
+Invoke-WebRequest https://goo.gl/aFBC52 -UseBasicParsing | Invoke-Expression; cinst-gh leonflix --force
 #iwr https://goo.gl/aFBC52 -UseBasicParsing | iex; cinst-gh swig --force
