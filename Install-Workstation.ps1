@@ -80,6 +80,7 @@ Write-Host "Trying to copy: Formatting tools to User Profile"
 # Installs PIP packages
 Write-Host "Trying to install: PIP Packages"
 python -m pip install -U pip setuptools
+pip install pipenv
 pip install python-language-server
 pip install --upgrade autopep8
 #pip install bw_plex[all]
