@@ -85,6 +85,12 @@ pip install python-language-server
 pip install --upgrade autopep8
 #pip install bw_plex[all]
 
+# Installs PowerShell Modules
+Write-Host "Trying to install: PowerShell Modules"
+Install-Module -Name PSScriptAnalyzer
+Install-Module -Name PowerShell-Beautifier
+Install-Module -Name Pester -Force
+
 # Installs NPM packages
 Write-Host "Trying to install: NPM Packages"
 npm -g install ytdl # https://github.com/fent/node-ytdl

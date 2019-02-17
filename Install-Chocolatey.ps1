@@ -41,8 +41,10 @@ choco install goggalaxy
 choco install itch
 choco install jackett
 choco install jbs
+choco install jq
 choco install lockhunter
 choco install memreduct
+choco install mkvtoolnix
 choco install mremoteng
 choco install msiafterburner
 choco install nodejs
@@ -62,6 +64,7 @@ choco install ussf
 choco install vlc
 choco install vnc-viewer
 choco install wget
+choco install whocrashed
 choco install winrar
 choco install winscp
 choco install wiztree
