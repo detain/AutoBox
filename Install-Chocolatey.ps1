@@ -50,8 +50,9 @@ choco install msiafterburner
 choco install nodejs
 choco install origin
 #choco install plexmediaserver
-choco install python3 --version 3.6.7 --params '"/InstallDir:C:\Tools\python3"'
+choco install python3 --version 3.7.2 --params '"/InstallDir:C:\Tools\python3"'
 choco install qbittorrent --x86
+#choco install ruby --params '"/InstallDir:C:\Tools\ruby"'
 choco install sonarr
 choco install ssip.portable
 choco install steam
@@ -68,6 +69,7 @@ choco install whocrashed
 choco install winrar
 choco install winscp
 choco install wiztree
+choco install yarn --params '"/InstallDir:C:\Tools\yarn"'
 
 # Install cint-gh packages
 [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor

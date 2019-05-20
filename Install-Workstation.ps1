@@ -93,6 +93,8 @@ Install-Module -Name Pester -Force
 
 # Installs NPM packages
 Write-Host "Trying to install: NPM Packages"
+npm -g install csso-cli # https://github.com/css/csso-cli
+npm -g install gulp-cli # https://github.com/gulpjs/gulp-cli
 npm -g install ytdl # https://github.com/fent/node-ytdl
 npm -g install speed-test # https://github.com/sindresorhus/speed-test
 npm -g install fkill-cli # https://github.com/sindresorhus/fkill-cli
