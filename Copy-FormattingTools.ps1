@@ -1,3 +1,3 @@
 $configpath = "$env:UserProfile"
-$configfiles = "F:\Misc\Formatters\*"
+$configfiles = "$env:UserProfile\Documents\Configs\*"
 xcopy $configfiles $configpath /Y

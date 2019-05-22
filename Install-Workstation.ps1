@@ -58,8 +58,8 @@ Write-Host "Pinning folders to Quick Access"
 .\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\Desktop\Github"
 .\Set-QuickAccess.ps1 -Action Pin -Path "C:\Tools\nginx"
 #.\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\.config\bw_plex"
-.\Set-QuickAccess.ps1 -Action Pin -Path "F:\Emulation"
-.\Set-QuickAccess.ps1 -Action Pin -Path "F:\3DS Tools"
+.\Set-QuickAccess.ps1 -Action Pin -Path "E:\Emulation"
+.\Set-QuickAccess.ps1 -Action Pin -Path "E:\3DS Tools"
 
 # Install chocolatey and packages
 Write-Host "Trying to install: Chocolatey and Packages"

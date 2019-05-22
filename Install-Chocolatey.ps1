@@ -31,6 +31,7 @@ choco install cheatengine
 choco install dropbox --pre
 choco install etcher
 choco install ffmpeg
+choco install filezilla
 choco install flashplayerplugin
 choco install geforce-experience
 choco install geforce-game-ready-driver
@@ -69,13 +70,13 @@ choco install whocrashed
 choco install winrar
 choco install winscp
 choco install wiztree
-choco install yarn --params '"/InstallDir:C:\Tools\yarn"'
+choco install yarn
 
 # Install cint-gh packages
-[System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor
-  768 -bor
-  [System.Net.SecurityProtocolType]::Tls -bor
-  [System.Net.SecurityProtocolType]::Ssl3
-
-Invoke-WebRequest https://goo.gl/aFBC52 -UseBasicParsing | Invoke-Expression; cinst-gh leonflix --force
+#[System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor
+#  768 -bor
+#  [System.Net.SecurityProtocolType]::Tls -bor
+#  [System.Net.SecurityProtocolType]::Ssl3
+#
+#Invoke-WebRequest https://goo.gl/aFBC52 -UseBasicParsing | Invoke-Expression; cinst-gh leonflix --force
 #iwr https://goo.gl/aFBC52 -UseBasicParsing | iex; cinst-gh swig --force
