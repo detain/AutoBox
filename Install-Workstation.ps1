@@ -40,17 +40,11 @@ Write-Host "Trying to remove: Default Installed Apps"
 . .\Move-UserShellFolders.ps1
 Write-Host "Moving My Video to D:\Media"
 Move-LibraryDirectory 'My Video' 'D:\Media'
-Write-Host "Trying to install: Windows Features"
-.\Install-WindowsFeature.ps1 NetFx3
-.\Install-WindowsFeature.ps1 SmbDirect
-.\Install-WindowsFeature.ps1 SMB1Protocol
-.\Install-WindowsFeature.ps1 SMB1Protocol-Client
-.\Install-WindowsFeature.ps1 SMB1Protocol-Server
-. .\Set-WindowsExplorerOptions.ps1
 Write-Host "Trying to set: Windows Explorer Options"
+. .\Set-WindowsExplorerOptions.ps1
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar -DisableOpenFileExplorerToQuickAccess -DisableShowRecentFilesInQuickAccess -DisableShowFrequentFoldersInQuickAccess
-. .\Set-TaskbarOptions.ps1
 Write-Host "Trying to set: Taskbar Options"
+. .\Set-TaskbarOptions.ps1
 Set-TaskbarOptions -Size Small -Lock -Combine Always
 
 # Pin folders to Quick Access
@@ -96,5 +90,6 @@ Write-Host "Trying to install: NPM Packages"
 npm -g install csso-cli # https://github.com/css/csso-cli
 npm -g install gulp-cli # https://github.com/gulpjs/gulp-cli
 npm -g install ytdl # https://github.com/fent/node-ytdl
+npm -g install youtube-dl-interactive # https://github.com/synox/youtube-dl-interactive
 npm -g install speed-test # https://github.com/sindresorhus/speed-test
 npm -g install fkill-cli # https://github.com/sindresorhus/fkill-cli
