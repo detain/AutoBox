@@ -22,13 +22,14 @@ choco install chocolateygui --source https://www.myget.org/F/chocolateygui/ --pr
 
 # Install all other apps
 choco install 7zip
-choco install atom --pre
+choco install altdrag
+choco install atom
 choco install autohotkey
 choco install bulkrenameutility
-choco install centbrowser
-choco install cheatengine
+choco install centbrowser --pre
+choco install cheatengine --ignore-checksum
 #choco install cue
-choco install dropbox --pre
+choco install dropbox
 choco install etcher
 choco install ffmpeg
 choco install filezilla
@@ -54,19 +55,19 @@ choco install origin
 choco install python3 --version 3.7.2 --params '"/InstallDir:C:\Tools\python3"'
 choco install qbittorrent --x86
 #choco install ruby --params '"/InstallDir:C:\Tools\ruby"'
-choco install sonarr
+choco install sonarr --pre
 choco install ssip.portable
 choco install steam
 choco install streamlink
 choco install teamviewer
-choco install twitch
+choco install twitch --ignore-checksum
 choco install unchecky
 choco install uplay
 choco install ussf
 choco install vlc
 choco install vnc-viewer
 choco install wget
-choco install whocrashed
+choco install whocrashed --ignore-checksum
 choco install winrar
 choco install winscp
 choco install wiztree
