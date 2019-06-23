@@ -73,8 +73,14 @@ Write-Host "Trying to copy: Formatting tools to User Profile"
 
 # Installs PIP packages
 Write-Host "Trying to install: PIP Packages"
+pip install pipenv # for pipenv
+# OR
+curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python # for poetry
+## --- ##
+pip install pyenv-win --target %USERPROFILE%/.pyenv # https://github.com/pyenv-win/pyenv-win
+# Need to set "%USERPROFILE%\.pyenv\pyenv-win\bin;%USERPROFILE%\.pyenv\pyenv-win\shims;" in environmental variables at beginning of path
+## --- ##
 python -m pip install -U pip setuptools
-pip install pipenv
 pip install python-language-server
 pip install --upgrade autopep8
 #pip install bw_plex[all]
