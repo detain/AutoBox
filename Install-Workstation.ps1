@@ -83,6 +83,7 @@ pip install pyenv-win --target %USERPROFILE%/.pyenv # https://github.com/pyenv-w
 python -m pip install -U pip setuptools
 pip install python-language-server
 pip install --upgrade autopep8
+pip install media_management_scripts
 #pip install bw_plex[all]
 
 # Installs PowerShell Modules
