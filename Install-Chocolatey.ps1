@@ -52,8 +52,8 @@ choco install msiafterburner
 choco install nodejs
 choco install origin
 #choco install plexmediaserver
-#choco install python3 --version 3.7.2 --params '"/InstallDir:C:\Tools\python3"'
-choco install anaconda3 --params '"/AddToPath /D:C:\Tools"'
+choco install python3 --version 3.7.2 --params '"/InstallDir:C:\Tools\python3"'
+#choco install anaconda3 --params '"/AddToPath /D:C:\Tools"'
 choco install qbittorrent --x86
 #choco install ruby --params '"/InstallDir:C:\Tools\ruby"'
 choco install sonarr --pre

@@ -77,7 +77,7 @@ pip install pipenv # for pipenv
 # OR
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python # for poetry
 ## --- ##
-pip install pyenv-win --target %USERPROFILE%/.pyenv # https://github.com/pyenv-win/pyenv-win
+pip install pyenv-win --target $env:UserProfile/.pyenv # https://github.com/pyenv-win/pyenv-win
 # Need to set "%USERPROFILE%\.pyenv\pyenv-win\bin;%USERPROFILE%\.pyenv\pyenv-win\shims;" in environmental variables at beginning of path
 ## --- ##
 python -m pip install -U pip setuptools
