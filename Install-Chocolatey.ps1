@@ -37,6 +37,7 @@ choco install flashplayerplugin
 choco install geforce-experience
 choco install geforce-game-ready-driver
 choco install git --params="'/GitAndUnixToolsOnPath'"
+choco install git-lfs
 choco install gitkraken
 choco install goggalaxy
 #choco install heroku-cli
