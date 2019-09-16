@@ -22,24 +22,23 @@ choco install chocolateygui --source https://www.myget.org/F/chocolateygui/ --pr
 
 # Install all other apps
 choco install 7zip
-choco install altdrag
 choco install atom
 choco install autohotkey
 choco install bulkrenameutility
 choco install centbrowser --pre
-choco install cheatengine --ignore-checksum
+#choco install cheatengine --ignore-checksum
 #choco install cue
 choco install dropbox
 choco install etcher
 choco install ffmpeg
 choco install filezilla
 choco install flashplayerplugin
-choco install geforce-experience
-choco install geforce-game-ready-driver
+#choco install geforce-experience
+#choco install geforce-game-ready-driver
 choco install git --params="'/GitAndUnixToolsOnPath'"
-choco install git-lfs
+#choco install git-lfs
 choco install gitkraken
-choco install goggalaxy
+#choco install goggalaxy
 #choco install heroku-cli
 choco install itch
 choco install jackett
@@ -52,7 +51,7 @@ choco install mremoteng
 choco install msiafterburner
 choco install nodejs
 choco install origin
-#choco install plexmediaserver
+choco install plexmediaserver --version 1.16.2.1297
 choco install python3 --version 3.7.2 --params '"/InstallDir:C:\Tools\python3"'
 #choco install anaconda3 --params '"/AddToPath /D:C:\Tools"'
 choco install qbittorrent --x86

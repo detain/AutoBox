@@ -51,9 +51,7 @@ Set-TaskbarOptions -Size Small -Lock -Combine Always
 Write-Host "Pinning folders to Quick Access"
 .\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\Desktop\Github"
 .\Set-QuickAccess.ps1 -Action Pin -Path "C:\Tools\nginx"
-#.\Set-QuickAccess.ps1 -Action Pin -Path "$env:UserProfile\.config\bw_plex"
 .\Set-QuickAccess.ps1 -Action Pin -Path "E:\Emulation"
-.\Set-QuickAccess.ps1 -Action Pin -Path "E:\3DS Tools"
 
 # Install chocolatey and packages
 Write-Host "Trying to install: Chocolatey and Packages"
