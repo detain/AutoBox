@@ -9,7 +9,7 @@ If ($OS -match "Microsoft Windows 10") {
 }
 
 # Refresh the PSEnviroment
-Update-SessionEnvironment
+refreshenv
 
 # Stop getting prompted
 choco feature enable -n=allowGlobalConfirmation
@@ -24,7 +24,7 @@ choco install chocolateygui --source https://www.myget.org/F/chocolateygui/ --pr
 choco install 7zip
 choco install atom
 choco install autohotkey
-choco install bulkrenameutility
+choco install bulkrenameutility --ignore-checksum
 choco install centbrowser --pre
 #choco install cheatengine --ignore-checksum
 #choco install cue
@@ -32,7 +32,6 @@ choco install dropbox
 choco install etcher
 choco install ffmpeg
 choco install filezilla
-choco install flashplayerplugin
 #choco install geforce-experience
 #choco install geforce-game-ready-driver
 choco install git --params="'/GitAndUnixToolsOnPath'"
@@ -42,7 +41,7 @@ choco install gitkraken
 #choco install heroku-cli
 choco install itch
 choco install jackett
-choco install jbs
+#choco install jbs
 choco install jq
 choco install lockhunter
 choco install memreduct
